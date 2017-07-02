@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <table>
+        <caption>客户列表</caption>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">年龄</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="customers : ${data}">
+                    <td th:text="${customers.id}">01</td>
+                    <td th:text="${customers.username}">朱遇平</td>
+                    <td th:text="${customers.age}">java</td>
+                </tr> 
+            </tbody>
+    </table>
+</body>
+</html>

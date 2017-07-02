@@ -19,14 +19,20 @@ public class LoginController {
     public String welcome(Map<String, Object> model) {
         model.put("time", new Date());
         model.put("message", this.message);
-        return "welcome";
+        return "index";
     }
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 
 	public String welcome() {
 
-		return "index";
+		return "index1";
+	}
+	@RequestMapping(value = "/tmf", method = RequestMethod.GET)
+
+	public String tmf() {
+
+		return "tmf";
 	}
 	/*
 	 * public ModelAndView hello() {
